@@ -213,9 +213,9 @@ function pushSearchResultsToDOM(response, startTime) {
     urllist.push(src)
 
     // concatenate a new url
-    container.innerHTML += "<a unique_id='" + btoa(src) + "' href='" + src + "' class='border border-l-4 rounded p-4 hover:bg-gray-50 hover:shadow' target='_blank'> \
+    container.innerHTML += "<a unique_id='" + btoa(src) + "' href='" + src + "' class='border rounded p-4 hover:bg-gray-50 hover:shadow' target='_blank'> \
           <p class='text-blue-500 text-2xl'>"+rootUrl+"</p> \
-          <p class='font-bold pt-2 text-1xl text-gray-500'>score: "+Math.round(100*response[key])+"</p></a>";
+          <p class='pt-2 text-1xl text-gray-500'>score: "+Math.round(100*response[key])+"</p></a>";
   }
 
   // update blocks with more info
@@ -269,7 +269,7 @@ function pushListResultsToDOM(response, startTime) {
     urllist.push(src)
 
     // concatenate a new url
-    container.innerHTML += "<a unique_id='" + btoa(src) + "' href='" + src + "' class='border border-l-4 rounded p-4 hover:bg-gray-50 hover:shadow' target='_blank'> \
+    container.innerHTML += "<a unique_id='" + btoa(src) + "' href='" + src + "' class='border rounded p-4 hover:bg-gray-50 hover:shadow' target='_blank'> \
           <p class='text-blue-500 text-2xl'>"+rootUrl+"</p> \
           <p class='pt-2 text-gray-500'>updated at: "+dtime+"</p></a>";
   });
@@ -341,7 +341,7 @@ function pushListBlockSummaryToDOM(summary) {
       tag.classList.add("pt-2");
       tag.classList.add("pr-5");
       tag.classList.add("pl-3");
-      tag.classList.add("text-sm");
+      tag.classList.add("text-xs");
       tag.classList.add("font-thin");
       
       element.appendChild(tag);
