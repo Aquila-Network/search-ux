@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aquila X Search Engine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="shadow flex flex-row justify-between gap-2 items-center h-10">
+      <div>
+        <b class=" pl-7"></b>
+        <a class="text-xs text-purple-600 hover:underline font-bold" href="/">Home</a>
+        <a class="text-xs text-purple-600 hover:underline pl-2" href="https://x.aquila.network/explore.html">Explore</a>
+      </div>
+      <!-- <div class="hidden flex flex-row gap-2 items-center" id="usernameDisplayContainer">
+        <p class="text-xs text-gray-600" id="usernameDisplay"></p>
+        <div class="bg-purple-600 rounded-full text-sm text-white text-bold p-1 w-7 h-7 justify-center items-center" >
+          <p id="userAvatarDisplay">UN</p>
+        </div>
+        <b class=" pl-5"></b>
+      </div> -->
+      <!-- <a class="hidden mr-5 bg-transparent hover:bg-purple-500 text-purple-700  text-sm font-semibold hover:text-white py-1 px-2 border border-purple-500 hover:border-transparent rounded" id="usernameDisplayCreate" href="https://aquila.network/index.html#form9-3">
+        Try managed service
+      </a> -->
+      <!-- <b class=" pl-3"></b> -->
+    </div>
+    <div class="grid sm:grid-cols-1 md:grid-cols-7 lg:grid-cols-5 justify-start pl-6 pr-6 sm:pl-20 sm:pr-20 md:pl-0 md:pr-0 mt-5">
+      <b></b>
+      <div class="grid justify-start grid-cols-1 md:grid-cols-4 p-2 sm:col-span-1 md:col-span-5 lg:col-span-3">
+        <div class="flex flex-row gap-2 justify-center items-center mb-5 md:mb-0 md:col-span-1">
+          <div class="flex flex-shrink-0 flex-grow-0">
+            <img src="img/logo.png"/>
+          </div>
+          <h1 class="font-serif font-bold text-7xl text-purple-600">X</h1>
+        </div>
+        
+      
+        <div class="flex justify-center md:col-span-3 items-center mr-6">
+          <div class="flex border rounded-full mr-4 pr-4 h-12 w-3/4 shadow items-center">
+            <div class="pl-4 py-2 text-gray-500 text-1xl">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input type="text" placeholder="" class="js-userinput border-opacity-0 px-3 w-full focus:outline-none"/>
+            <div class="fill-current text-purple-800 text-1xl ">
+              <a class="cleartxt cursor-pointer hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <button class="js-go text-1xl px-6 py-3 bg-purple-500 text-white hover:bg-purple-600 font-normal rounded shadow hover:shadow outline-none focus:outline-none">Search</button>
+        </div>
+      </div>
+      <b></b>
+
+      <b></b>
+      <div class="flex pt-10 py-3 text-gray-600 text-xs px-2 sm:col-span-1 md:col-span-5 lg:col-span-3 hover:underline">
+        <p>
+          <a href="https://airtable.com/shr3QnQbBhWmIKv8p">
+          send us your feedback<p class="pl-2">🗣️📣</p></a>
+        </p>
+      </div>
+      <b></b>
+
+      <b></b>
+      <div class="flex flex-row items-center px-2 text-purple-600 text-xs sm:col-span-1 md:col-span-5 lg:col-span-3">
+          <p class="hidden" id="shareButtonPlacer">share this bookmark (public):</p>
+          <p class="hidden" id="subscribeButtonPlacer">subscribe to this bookmark:</p>
+          <div class="broder p-1 items-center bg-gray-200 rounded ml-3 hidden" id="copyPublicURLdiv">
+            <input type="text" value="https://x.aquila.network" id="copyPublicURLinp" class="ml-3 pl-3 text-gray-400 bg-gray-200">
+            <button class="cursor-pointer border shadow bg-gray-100 text-xs rounded-full px-2" id="copyPublicURLButton" onclick="copyPublicURL()">copy</button>
+          </div>
+          <a title="Export bookmarks" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" class="hidden ml-2 p-1 h-6 w-6 hover:bg-gray-100 rounded" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </a>
+          <button class="hidden cursor-pointer border shadow bg-green-400 text-xs p-1 pl-2 pr-2 text-white ml-2" id="togglePublicURLButton" onclick="togglePublicURL()">Share</button>
+          <button class="hidden cursor-pointer border shadow bg-yellow-500 text-xs p-1 pl-2 pr-2 text-white ml-2" id="togglePublicSubscribeButton" onclick="togglePublicSubscribe()">+ Follow</button>
+      </div>
+      <b></b>
+
+      <b></b>
+      <div class="p-2 sm:col-span-1 md:col-span-5 lg:col-span-3">
+        <div class="flex flex-col gap-3 js-container">
+          <p class="pt-20 text-gray-400 font-bold">🚨 Make sure that you have installed AquilaX <a href="https://chrome.google.com/webstore/detail/aquila-x/albdahjdcmldbcpjmbnbcbckgndaibnk" class="underline">Chrome</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/aquilax/" class="underline">Firefox</a> extension</p>
+        </div>
+      </div>
+      <b></b>
+
+      <b></b>
+      <div class="flex pt-20 pb-10 p-2 sm:col-span-1 md:col-span-5 lg:col-span-3 justify-center text-sm">
+        <p>© 2021 Aquila Network</p>
+      </div>
+    </div>
+    <!-- Link to JavaScript File here-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="javascript/main.js"></script>
+  </body>
+</html>
+
